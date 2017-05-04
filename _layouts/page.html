@@ -8,7 +8,9 @@ comments: true
 
 </article>
 
-<div class="testdiv"></div>
+<div class="testdiv">{% page.url  %}</div>
+<div class="testdiv">{% page.id %}</div>
+<div class="testdiv"> {% page.comments %}</div>
 <!--{% if page.comments == true %} -->
   
    
@@ -21,7 +23,7 @@ comments: true
 		
 		var disqus_config = function () {
 		this.page.url = "{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = "{{ page.url }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 		};
 		
 		(function() { // DON'T EDIT BELOW THIS LINE
